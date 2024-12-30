@@ -9,6 +9,7 @@ body {
 
 a {
     color: #333;
+    word-break: break-all;
 }
 
 a:hover {
@@ -20,7 +21,7 @@ p {
 }
 
 #top {
-    max-width: 760px;
+    max-width: 680px;
     margin: 0 auto;
 }
 
@@ -35,6 +36,12 @@ header {
     background: #f1f1f1;
 }
 
+@media (max-width: 680px) {
+    #contents {
+        padding: 4px 8px;
+    }
+}
+
 footer {
     padding: 0.75rem 1rem;
     background: #333;
@@ -43,7 +50,13 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;}
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer p:last-child {
+    margin-left: auto;
+}
 
 header h1 {
     margin: 0;
